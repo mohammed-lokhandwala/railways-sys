@@ -1,0 +1,20 @@
+/* TravellerList.css */
+
+.traveller-list-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .traveller-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .traveller-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
