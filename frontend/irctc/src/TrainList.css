@@ -24,7 +24,8 @@
 }
 
 .train-item {
-  
+  justify-content: center !important;
+  margin-left: 140px;
   margin-left: none; /* Center the item horizontally */
   margin-right: auto; /* Center the item horizontally */
   width: 80%; /* Set the width of the item */
@@ -34,7 +35,7 @@
   background-color: #fff; /* Background color */
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Padding inside the item */
-  box-shadow: 0 4px 12px rgba(0.2, 0.2, 0.2, 0.2); /* Box shadow effect */
+  box-shadow: 0 4px 6px rgba(0.1, 0.1, 0.1, 0.1); /* Box shadow effect */
   transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
   
 }
@@ -87,11 +88,17 @@
 }
 
 .train-item div {
-  
-  margin-right: 0px;
+  justify-content: flex-start;
+   align-items: center;
 }
 
-
+.train-item .TO {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0 !important;
+   /* Adjust as needed */
+}
 
 .train-item strong {
   padding: 6px;
@@ -216,102 +223,49 @@ input {
   text-align: center;
   padding: 10px 0;
 }
-/* TrainInfo.css */
-.train-info-item {
-  display: flex;
-  justify-content: flex-start !important;
-  flex-direction: column;
-  align-items: flex-start !important; /* Align content vertically */
-  background-color: #ffffff; /* Background color */
-  border: 1px solid #cccccc; /* Border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 10px; /* Padding */
-  margin-bottom: 10px; /* Margin bottom */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
-  margin-left: 0 !important;
-}
 
+/* TrainList.css */
 
-.train-info-box {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: px;
-  margin-bottom: 20px;
-}
-
-.train-info-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
-.train-info-item {
-  flex: 1 0 33.33%; /* Adjust as needed */
- 
-}
-
-
-.train-list ul {
+.ticket {
+  border-radius: 3px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
-
-}
-
-
-.train-item-link {
-  width: 80%;
-  margin-left: 150px;
-  display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
-  
-  
-  align-items: center;
+  max-width: 200px;
+  box-shadow: 0 6px 8px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
-.train-item{
-  
-  justify-content: flex-start;
-  justify-items: flex-start;
+.ticket-info {
   display: flex;
-  flex-direction: column;
-  
-}
-
-.upper{
-  margin-bottom: 20px !important;
-  padding:  10px;
-  justify-content: space-between;
   align-items: center;
-
+  justify-content:space-between;
 }
 
-.lower{
-  width: 100%;
-
-  justify-content: space-between;
-  margin-left: 0;
+.ticket-info h2 {
+  margin-right: 75px;
+  font-size: 16px;
+  color: black;
 }
 
-.train-detailinfo {
-  width: 100%;
+.ticket-info strong {
+  font-size: 14px;
+  color: black;
 }
 
-.train-info-item {
-  display: flex;
-  flex-direction: column;
-  
-  align-items: flex-start; /* Align content vertically */
-  background-color: #ffffff; /* Background color */
-  border: 1px solid #cccccc; /* Border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 15px; /* Padding */
-  margin-bottom: 10px; /* Margin bottom */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+.cancellation-info {
+  font-weight: 600;
+  font-size: 10px;
+  padding: 0 !important;
+  margin:  0 !important;
+  margin-top: 4px;
+  font-size: 12px;
+  color: black;
 }
 
-
-.train-info-row {
-  margin-right: 10px;
+.ticket-info p{
+  font-size: 16px;
+  font-weight: 700;
 }
 

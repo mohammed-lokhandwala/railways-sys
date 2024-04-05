@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './TrainList.css';
 import Navbar from './Navbar';
-import Footer from './Footer';
+import Footer from './Footer'
 
 function TrainList() {
   const [trains, setTrains] = useState([]);
@@ -47,35 +47,19 @@ function TrainList() {
           <Link to={`/train/${train._id}`} key={train._id} className="train-item-link">
             <li className="train-item">
 
-          <div className='upper'>
-          <div className='t'><strong>Train Name:</strong> {train.trainName}</div>
+       
+          <div className='t'><strong>{train.trainName}</strong> </div>
               <div className='aa'><strong> {train.from}</strong> {train.arrival}</div>
+               <div className='TO'><strong>TO</strong></div>
               <div className='dd'><strong> {train.where} </strong> {train.departure}</div>
-              <div><strong>Ticket Price:</strong> {train.ticketPrice} ₹</div>
-          </div>
 
-          <div className='lower'>
-          <div className='train-detailinfo'>
-            <div className="train-info-row">
-        <div className="train-info-item">
-          <strong>AC 2 Tier (2A):</strong> WL3 ₹2130
-        </div>
-      </div>
-      <div className="train-info-row">
-        <div className="train-info-item">
-          <strong>AC 3 Tier (3A):</strong> WL20 ₹1475
-        </div>
-      </div>
-      <div className="train-info-row">
-        <div className="train-info-item">
-          <strong>Sleeper (SL):</strong> WL93 ₹550
-        </div>
-      </div>
-            </div> 
-          </div>
-               
-
-         
+              <div className='ticket'>
+              <div className='ticket-info'>
+              <h2>SE</h2>
+              <p>₹{train.ticketPrice}</p>
+              </div>
+              <p className="cancellation-info">Cancellation AVAILABLE</p >
+              </div>
             </li>
          
 

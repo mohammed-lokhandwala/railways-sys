@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './Signup.css'; // Import the CSS file
+import './Signup.css'; // Import CSS file
 
 function Signup() {
   const navigate = useNavigate();
@@ -21,12 +21,14 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formData)
     try {
       const response = await axios.post('http://localhost:3000/signup', formData);
-      console.log('Signup successful:', response.data._id);
+
+      console.log('Signup successful:', response._id);
 
       // Store token and user data in local storage
-      localStorage.setItem('token', response.data._id);
+      localStorage.setItem('token', response.data);
       localStorage.setItem('userData', JSON.stringify(response.data.user));
             // Redirect to '/trainlist' after successful signup
       navigate('/trainlist');
@@ -37,9 +39,9 @@ function Signup() {
   };
 
   return (
-    <div className="signup-container"> {/* Add class to container */}
+    <div className="signup-container">
       <h2>Signup</h2>
-      <form className="signup-form" onSubmit={handleSubmit}> {/* Add class to form */}
+      <form className="signup-form" onSubmit={handleSubmit}>
         <div>
           <label>Username:</label>
           <input type="text" name="username" value={formData.username} onChange={handleChange} />

@@ -26,13 +26,13 @@ function AddTraveller({ onAddTraveller }) {
 
   return (
     <div className="add-traveller-container">
-      <button className="add-traveller-button" onClick={() => setShowPopup(true)}>
-        Add Traveller
+      <button className="add" onClick={() => setShowPopup(true)}>
+        Add Traveller    +
       </button>
       {/* Popup for adding traveller */}
       {showPopup && (
         <div className="add-traveller-popup">
-          <h2>Add Traveller</h2>
+          <h2 className=''>Add Traveller </h2>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -54,7 +54,7 @@ function AddTraveller({ onAddTraveller }) {
             </select>
             <button type="submit">Add User</button>
           </form>
-          <button onClick={() => setShowPopup(false)}>Close</button>
+          <button  className='close' onClick={() => setShowPopup(false)}>Close</button>
         </div>
       )}
     </div>
